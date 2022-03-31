@@ -16,9 +16,9 @@ namespace UI
         static void Main(string[] args)
         {
             ConractGroupDal conractGroupDal = new ConractGroupDal();
-            List<string> conracts = conractGroupDal.GetAllDifferentConracts();
             var conGr = conractGroupDal.GetAllWithoutPB();
             conGr.Sort(new DateComparer());
+
             Console.WriteLine("Tarih               " + "Toplam İşlem Miktarı (MWh) " + " Toplam İşlem Tutarı(TL) " + "    Ağırlıklı Ortalama Fiyat (TL/MHw)");
             foreach (var item in conGr)
             {
