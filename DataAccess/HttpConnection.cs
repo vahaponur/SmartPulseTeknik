@@ -13,7 +13,9 @@ namespace DataAccess
     /// </summary>
     public static class HttpConnection
     {
-         const string connectionStr = "https://seffaflik.epias.com.tr/transparency/service/market/intra-day-trade-history?endDate=2022-01-26&startDate=2022-01-26.xml"; 
+        public static string startDate = "2022-02-07";
+        public static string endDate = "2022-02-07";
+         static  string connectionStr = "https://seffaflik.epias.com.tr/transparency/service/market/intra-day-trade-history?endDate="+endDate+"&startDate="+startDate; 
 
        public static string GetFullPageString()
         {
